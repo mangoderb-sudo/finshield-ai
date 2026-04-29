@@ -395,12 +395,12 @@ finshield-ai/
       <a href="https://github.com/mangoderb-sudo">@mangoderb-sudo</a>
     </td>
     <td align="center">
-      <b>Said</b><br/>
+      <b>Myra Said</b><br/>
       <sub>Data · Frontend</sub><br/>
       <a href="https://github.com/saidmyra">@saidmyra</a>
     </td>
     <td align="center">
-      <b>Lioxys</b><br/>
+      <b>Ludkas Pilorge-Leroux</b><br/>
       <sub>Infra · DevOps</sub><br/>
       <a href="https://github.com/Lioxys">@Lioxys</a>
     </td>
