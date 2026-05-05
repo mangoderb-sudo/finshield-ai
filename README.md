@@ -33,7 +33,7 @@
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 
 - [The Problem](#-the-problem)
 - [Solution Overview](#-solution-overview)
@@ -51,7 +51,7 @@
 
 ---
 
-## 🎯 The Problem
+##  The Problem
 
 Financial institutions face three simultaneous challenges that are fundamentally interconnected:
 
@@ -74,7 +74,7 @@ These three needs share the **same data**, the **same infrastructure**, and the 
 
 ---
 
-## 💡 Solution Overview
+##  Solution Overview
 
 ```
 Client submits loan application
@@ -102,7 +102,7 @@ Client submits loan application
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 finshield-ai/
@@ -211,7 +211,7 @@ User question → Semantic search (top-k=5)
 
 ---
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 ### Credit Scoring
 
@@ -231,7 +231,7 @@ User question → Semantic search (top-k=5)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technologies |
 |-------|-------------|
@@ -243,7 +243,7 @@ User question → Semantic search (top-k=5)
 
 ---
 
-## 🗃️ Dataset
+## Dataset
 
 | Dataset | Source | Volume | Use Case |
 |---------|--------|--------|----------|
@@ -254,7 +254,7 @@ User question → Semantic search (top-k=5)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Docker & Docker Compose v2+
@@ -287,7 +287,7 @@ streamlit run frontend/app.py --server.port 8501
 
 ---
 
-## 🔌 API Reference
+##  API Reference
 
 ### Credit Scoring
 ```bash
@@ -370,7 +370,7 @@ finshield-ai/
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️Roadmap
 
 - [x] Project structure & GitHub setup
 - [x] EDA — Home Credit Default Risk (`01_eda_scoring.ipynb`)
@@ -417,7 +417,7 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Home Credit Group](https://www.homecredit.net/) — open dataset
 - [Worldline & ULB](https://www.worldline.com/) — fraud detection dataset
@@ -429,7 +429,7 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information
 
 <div align="center">
 
-**Built with ❤️ at ECE Paris — B3 Data Science & IA — 2024/2025**
+**Built with ❤️ at ECE Paris — Data Science & IA — 2024/2025**
 
 <br/>
 
