@@ -126,7 +126,7 @@ finshield-ai/
 
 ---
 
-## 🧩 Modules
+##  Modules
 
 ### Module 1 — Credit Scoring
 
@@ -339,7 +339,7 @@ POST /ask
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 finshield-ai/
@@ -370,7 +370,7 @@ finshield-ai/
 
 ---
 
-## 🗺️Roadmap
+## Roadmap
 
 - [x] Project structure & GitHub setup
 - [x] EDA — Home Credit Default Risk (`01_eda_scoring.ipynb`)
@@ -385,7 +385,7 @@ finshield-ai/
 
 ---
 
-## 👥 Team
+##  Team
 
 <table>
   <tr>
@@ -411,7 +411,7 @@ finshield-ai/
 
 ---
 
-## 📄 License
+##  License
 
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
