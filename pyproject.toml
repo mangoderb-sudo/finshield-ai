@@ -1,0 +1,5 @@
+[project]
+name = "finshield-ai"
+version = "0.1.0"
+description = "Financial Risk Intelligence Platform"
+requires-python = ">=3.11"

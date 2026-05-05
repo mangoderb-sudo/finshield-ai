@@ -1,0 +1,17 @@
+model:
+  scoring:
+    n_estimators: 1000
+    max_depth: 5
+    learning_rate: 0.05
+  fraud:
+    threshold: 0.5
+    
+database:
+  host: localhost
+  port: 5432
+  name: finshield_db
+
+rag:
+  chunk_size: 512
+  chunk_overlap: 50
+  top_k: 5
