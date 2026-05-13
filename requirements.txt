@@ -22,8 +22,10 @@ scikit-learn==1.5.0
 xgboost==2.0.3
 lightgbm==4.3.0
 imbalanced-learn==0.12.3
-shap==0.45.1
-fairlearn==0.10.0
+shap==0.45.1; python_version < "3.13"
+shap==0.51.0; python_version >= "3.13"
+fairlearn==0.10.0; python_version < "3.13"
+fairlearn==0.13.0; python_version >= "3.13"
 
 # ── MLflow ────────────────────────────────────────────────
 mlflow==2.13.2
