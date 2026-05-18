@@ -204,12 +204,8 @@ if ask_button:
                 json={
                     "question": question
                 },
-                
             )
 
-            
-
-            # Try JSON safely
             try:
                 
                 result = response.json()
@@ -218,12 +214,33 @@ if ask_button:
                     "### 🤖 Assistant Answer"
                 )
 
-                st.success(
-                    result.get(
-                        "answer",
-                        "No answer returned."
+                # =========================
+                # API ERROR
+                # =========================
+
+                if response.status_code != 200:
+
+                    st.error(
+
+                        result.get(
+                            "detail",
+                            "Unknown API error."
+                        )
                     )
-                )
+
+                # =========================
+                # SUCCESS
+                # =========================
+
+                else:
+
+                    st.success(
+
+                        result.get(
+                            "answer",
+                            "No answer returned."
+                        )
+                    )
 
             except Exception:
                 
@@ -236,4 +253,3 @@ if ask_button:
             st.error(
                 f"API Error: {exc}"
             )
-    

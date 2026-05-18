@@ -53,6 +53,11 @@ def ask_question(
             status_code=503,
             detail=str(exc)
         ) from exc
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"RAG Error: {str(exc)}"
+        ) from exc
     
     return {
         

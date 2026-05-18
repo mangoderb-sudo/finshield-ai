@@ -643,6 +643,76 @@ with right_col:
 
                 unsafe_allow_html=True
             )
+            #Creation de decision_text pour le stocker dans le json de prediction   
+            import json
+
+            prediction_context = {
+
+                # =====================
+                # MODEL OUTPUTS
+                # =====================
+
+                "probability": float(probability),
+
+                "risk_level": risk_level,
+
+                "decision": decision_text,
+
+                # =====================
+                # FINANCIAL DATA
+                # =====================
+
+                "income": income,
+
+                "credit_amount": credit,
+
+                "annuity": annuity,
+
+                "goods_price": goods_price,
+
+                # =====================
+                # CLIENT PROFILE
+                # =====================
+
+                "age_years": age_years,
+
+                "employment_years": employment_years,
+
+                "children": children,
+
+                "gender": gender,
+
+                # =====================
+                # PROFESSIONAL PROFILE
+                # =====================
+
+                "education": education,
+
+                "income_type": income_type,
+
+                "region_rating": region_rating,
+
+                # =====================
+                # EXTERNAL SCORES
+                # =====================
+
+                "ext_source_1": ext1,
+
+                "ext_source_2": ext2,
+
+                "ext_source_3": ext3
+            }
+
+            with open(
+                "data/latest_prediction.json",
+                "w"
+            ) as f:
+
+                json.dump(
+                prediction_context,
+                f,
+                indent=4
+                )
 
             # ==========================================
             # GAUGE

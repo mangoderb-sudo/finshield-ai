@@ -1,4 +1,5 @@
 import os
+import json
 from functools import lru_cache
 from pathlib import Path
 from langchain_core.prompts import PromptTemplate
@@ -126,13 +127,50 @@ def ask_rag(question):
         )
 
     # =====================================
+    # LOAD LAST PREDICTION
+    # =====================================
+
+    try:
+
+        with open(
+            "data/latest_prediction.json",
+            "r"
+        ) as f:
+
+            prediction_context = json.load(f)
+
+    except Exception:
+
+        prediction_context = {}
+
+    # =====================================
+    # AUGMENTED QUESTION
+    # =====================================
+
+    augmented_question = f"""
+
+    User Question:
+    {question}
+
+    Client Prediction Context:
+    {prediction_context}
+
+    Explain the prediction using
+    the underwriting policies
+    and financial context.
+    """
+
+    # =====================================
     # DEBUG RETRIEVED DOCS
     # =====================================
 
     docs = (
+
         get_qa_chain()
+
         .retriever
-        .invoke(question)
+
+        .invoke(augmented_question)
     )
 
     for i, doc in enumerate(docs):
@@ -146,7 +184,10 @@ def ask_rag(question):
     # =====================================
 
     response = (
-        get_qa_chain().invoke(question)
+
+        get_qa_chain()
+
+        .invoke(augmented_question)
     )
 
     return response["result"]
