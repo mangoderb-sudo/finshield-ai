@@ -563,6 +563,10 @@ with right_col:
             result = response.json()
 
             prediction_data = result["data"]
+            top_risk_factors = (
+
+               prediction_data["top_risk_factors"]
+            )
 
             probability = prediction_data[
                 "default_probability"
@@ -643,6 +647,22 @@ with right_col:
 
                 unsafe_allow_html=True
             )
+            # ==========================================
+            # TOP RISK FACTORS
+            # ==========================================
+            st.markdown("### 🔍 Top Risk Drivers")
+        
+            for feature, value in top_risk_factors:
+              clean_feature = (feature.replace("remainder__", "").replace("cat__", ""))
+
+              if value > 0:
+
+                st.error(f"▲ {clean_feature} ({value:.3f})")
+
+              else:
+
+                st.success(f"▼ {clean_feature} ({value:.3f})")
+
             #Creation de decision_text pour le stocker dans le json de prediction   
             import json
 
@@ -657,6 +677,8 @@ with right_col:
                 "risk_level": risk_level,
 
                 "decision": decision_text,
+
+                "top_risk_factors": top_risk_factors,
 
                 # =====================
                 # FINANCIAL DATA

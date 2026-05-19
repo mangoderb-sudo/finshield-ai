@@ -218,15 +218,24 @@ if ask_button:
                 # API ERROR
                 # =========================
 
-                if response.status_code != 200:
+                if response.status_code == 429:
+
+                     
+                    st.warning(
+                          "⚠️ Mistral AI is temporarily overloaded. "
+                       "Please retry in a few seconds."
+                    )
+
+                elif response.status_code != 200:
 
                     st.error(
 
-                        result.get(
-                            "detail",
-                            "Unknown API error."
+                      result.get(
+                         "detail",
+                         "Unknown API error."
                         )
                     )
+        
 
                 # =========================
                 # SUCCESS

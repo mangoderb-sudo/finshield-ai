@@ -1,19 +1,41 @@
 {
-    "probability": 0.0399,
-    "risk_level": "LOW RISK",
-    "decision": "\u2705 LOAN APPROVED",
-    "income": 150000.0,
+    "probability": 0.8164,
+    "risk_level": "HIGH RISK",
+    "decision": "\u274c LOAN REJECTED",
+    "top_risk_factors": [
+        [
+            "remainder__EXT_SOURCE_MEAN",
+            1.4054088592529297
+        ],
+        [
+            "remainder__EXT_SOURCE_3",
+            0.6636670231819153
+        ],
+        [
+            "remainder__CNT_CHILDREN",
+            0.5462257862091064
+        ],
+        [
+            "remainder__AMT_INCOME_TOTAL",
+            0.4793504774570465
+        ],
+        [
+            "remainder__EXT_SOURCE_1",
+            0.3685215711593628
+        ]
+    ],
+    "income": 100.0,
     "credit_amount": 500000.0,
     "annuity": 25000.0,
     "goods_price": 450000.0,
     "age_years": 35,
     "employment_years": 5,
-    "children": 0,
+    "children": 9,
     "gender": "M",
     "education": "Higher education",
     "income_type": "Working",
     "region_rating": 1,
-    "ext_source_1": 0.5,
-    "ext_source_2": 0.5,
-    "ext_source_3": 0.5
+    "ext_source_1": 0.03,
+    "ext_source_2": 0.03,
+    "ext_source_3": 0.02
 }
